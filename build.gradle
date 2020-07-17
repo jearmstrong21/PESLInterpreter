@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '6.0.0'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+mainClassName = 'p0nki.pesl.interpreter.PESLInterpreter'
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.github.jearmstrong21:PESL:2.1'
+    implementation group: 'commons-cli', name: 'commons-cli', version: '1.4'
+}
